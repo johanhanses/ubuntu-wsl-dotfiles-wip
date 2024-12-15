@@ -1,0 +1,30 @@
+[user]
+    name = Johan Hanses
+    email = johanhanses@gmail.com
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+    default = current
+
+[merge]
+    conflictstyle = zdiff3
+
+[interactive]
+    diffFilter = delta --color-only
+
+[diff]
+    colorMoved = default
+
+[delta]
+    line-numbers = true
+    navigate = true
+
+[core]
+    pager = delta
+    excludesfile = ~/.gitignore_global
