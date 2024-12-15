@@ -19,6 +19,11 @@ sudo apt install -y \
     bat
 # packages end
 
+# bat config
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+# end bat config
+
 # docker
 sudo apt-get update
 sudo apt-get install ca-certificates curl
