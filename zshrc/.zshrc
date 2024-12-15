@@ -85,12 +85,14 @@ alias tk='tmux kill-server'
 alias tl='tmux ls'
 alias ta='tmux a'
 
+alias f='fzf --tmux 80%,40%'
+
 alias d="docker"
 alias dc="docker compose"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/johanhanses/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

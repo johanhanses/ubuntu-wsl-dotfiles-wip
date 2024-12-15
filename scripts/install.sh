@@ -11,18 +11,31 @@ sudo apt install -y \
     git \
     zsh \
     neovim \
-    fzf \
     tree \
     nnn \
     eza \
     git-delta \
-    bat
+    bat 
 # packages end
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+echo >> alias alias f='fzf --tmux 80%,40%' ~/zshrc 
+# fzf end
 
 # bat config
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 # end bat config
+
+# lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit -D -t /usr/local/bin/
+# end lazygit
 
 # docker
 sudo apt-get update
