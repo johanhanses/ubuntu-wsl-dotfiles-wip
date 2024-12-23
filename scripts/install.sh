@@ -1,28 +1,29 @@
 # node 22
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo apt-get install -y nodejs
-echo "installed node version: " 
+echo "installed node version: "
 node -v
-rm nodesource_setup.sh    
+rm nodesource_setup.sh
 # node end
 
 # various packages
 sudo apt install -y \
-    git \
-    zsh \
-    neovim \
-    tree \
-    nnn \
-    eza \
-    git-delta \
-    bat 
+  git \
+  zsh \
+  neovim \
+  tree \
+  nnn \
+  eza \
+  git-delta \
+  bat \
+  fd-find
 # packages end
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-echo >> alias alias f='fzf --tmux 80%,40%' ~/zshrc 
+echo >>alias alias f='fzf --tmux 80%,40%' ~/zshrc
 # fzf end
 
 # bat config
@@ -46,8 +47,8 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+  sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin

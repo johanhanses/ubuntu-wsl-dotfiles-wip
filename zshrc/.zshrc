@@ -19,7 +19,7 @@ export SCRIPTS="$DOTFILES/scripts"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-
+export TERM=tmux-256color
 export CLICOLOR=1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

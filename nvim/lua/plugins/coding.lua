@@ -9,11 +9,4 @@ return {
   },
 
   { "smjonas/inc-rename.nvim", cmd = "IncRename", config = true },
- 
-  -- Highlight colors
-  {
-    "echasnovski/mini.hipatterns",
-    event = "BufReadPre",
-    opts = {},
-  },
 }

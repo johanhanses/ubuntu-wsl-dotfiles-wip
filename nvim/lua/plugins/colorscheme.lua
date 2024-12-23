@@ -1,4 +1,4 @@
---   -- add gruvbox
+-- add gruvbox
 -- return {
 --   { "ellisonleao/gruvbox.nvim" },
 --
@@ -8,9 +8,8 @@
 --     opts = {
 --       colorscheme = "gruvbox",
 --     },
---   }
+--   },
 -- }
---
 
 return {
   -- add gruvbox
@@ -20,7 +19,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
+      background_color = "dark",
       colorscheme = "gruvbox-baby",
     },
-  }
+  },
 }
