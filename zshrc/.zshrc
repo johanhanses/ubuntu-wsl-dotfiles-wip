@@ -1,8 +1,8 @@
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
-export HISTSIZE=25000
-export SAVEHIST=25000
+export HISTSIZE=100000
+export SAVEHIST=100000
 export HISTCONTROL=ignorespace
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,7 +48,8 @@ alias windows="cd /mnt/c/Users/johanhanses"
 
 alias szr="source ~/.zshrc"
 # alias cat="bat"
-alias fast="fast -u --single-line"
+# alias fast="fast -u --single-line"
+alias speed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias nv=nvim
 alias ..="cd .."
 alias c="clear"
